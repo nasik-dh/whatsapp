@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Clone - Web Messenger</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+     <script src="script.js"></script>
+    </head>
+<body>
+    <div class="whatsapp-container">
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="profile-pic">
+                    <span>Me</span>
+                </div>
+                <div class="flex gap-4">
+                    <i class="fas fa-circle-notch text-xl text-gray-600 cursor-pointer hover:text-teal-600"></i>
+                    <i class="fas fa-message text-xl text-gray-600 cursor-pointer hover:text-teal-600"></i>
+                    <i class="fas fa-ellipsis-vertical text-xl text-gray-600 cursor-pointer hover:text-teal-600"></i>
+                </div>
+            </div>
+            
+            <div class="search-container">
+    <input type="text" class="search-box" placeholder="Search or start new chat" id="searchInput">
+</div>
+            
+            <div class="chat-list" id="chatList">
+                <!-- Chat items will be populated by JavaScript -->
+            </div>
+        </div>
+        
+        <div class="main-chat">
+            <div class="no-chat-selected" id="noChatSelected">
+                <i class="fab fa-whatsapp no-chat-icon"></i>
+                <div class="no-chat-text">WhatsApp Web</div>
+                <div class="no-chat-subtext">Send and receive messages without keeping your phone online.</div>
+            </div>
+            
+            <div class="chat-area" id="chatArea" style="display: none;">
+                <div class="chat-header">
+                    <i class="fas fa-arrow-left mobile-back" id="mobileBack"></i>
+                    <div class="profile-pic contact-pic" id="currentContactPic">
+                        <span id="currentContactInitial">J</span>
+                        <div class="online-indicator" id="currentContactOnline"></div>
+                    </div>
+                    <div class="chat-header-info">
+                        <div class="chat-header-name" id="currentContactName">John Smith</div>
+                        <div class="chat-header-status" id="currentContactStatus">online</div>
+                    </div>
+                    <div class="chat-actions">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-phone"></i>
+                        <i class="fas fa-video"></i>
+                        <i class="fas fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                
+                <div class="messages-container" id="messagesContainer">
+                    <div class="typing-indicator" id="typingIndicator">
+                        <div class="typing-dots">
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="input-area">
+    <div class="input-actions">
+        <i class="fas fa-face-smile" id="emojiButton"></i>
+        <input type="file" id="fileInput" style="display: none;" accept="image/*,video/*,audio/*,.pdf,.doc,.docx,.txt">
+        <i class="fas fa-paperclip" id="attachButton"></i>
+    </div>
+    <textarea class="message-input" placeholder="Type a message" id="messageInput" rows="1"></textarea>
+    <button class="send-button" id="sendButton">
+        <i class="fas fa-paper-plane"></i>
+    </button>
+</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="emoji-picker" id="emojiPicker">
+        <div class="emoji-grid">
+            <div class="emoji">😀</div>
+            <div class="emoji">😃</div>
+            <div class="emoji">😄</div>
+            <div class="emoji">😁</div>
+            <div class="emoji">😆</div>
+            <div class="emoji">😅</div>
+            <div class="emoji">😂</div>
+            <div class="emoji">🤣</div>
+            <div class="emoji">😊</div>
+            <div class="emoji">😇</div>
+            <div class="emoji">🙂</div>
+            <div class="emoji">🙃</div>
+            <div class="emoji">😉</div>
+            <div class="emoji">😌</div>
+            <div class="emoji">😍</div>
+            <div class="emoji">🥰</div>
+            <div class="emoji">😘</div>
+            <div class="emoji">😗</div>
+            <div class="emoji">😙</div>
+            <div class="emoji">😚</div>
+            <div class="emoji">😋</div>
+            <div class="emoji">😛</div>
+            <div class="emoji">😝</div>
+            <div class="emoji">😜</div>
+            <div class="emoji">🤪</div>
+            <div class="emoji">🤨</div>
+            <div class="emoji">🧐</div>
+            <div class="emoji">🤓</div>
+            <div class="emoji">😎</div>
+            <div class="emoji">🤩</div>
+            <div class="emoji">👍</div>
+            <div class="emoji">👎</div>
+            <div class="emoji">👏</div>
+            <div class="emoji">🙌</div>
+            <div class="emoji">🤝</div>
+            <div class="emoji">❤️</div>
+        </div>
+    </div>
+</body>
+</html>
